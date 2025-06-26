@@ -24,7 +24,7 @@ list_of_files = [
     'setup.py',
     'app.py',
     'main.py',
-    'test.py'
+    'test.py',
     'Dockerfile',
     'requirements.txt',
     'research/trails.ipynb'
@@ -40,7 +40,7 @@ for filepath in list_of_files:
         os.makedirs(filedir, exist_ok=True)
         logging.info(f'>>>>> Creating directory: {filedir} for the file: {filename} <<<<<')
     
-    if (not os.path.exists(filename)) or (os.path.get_size(filename) == 0):
+    if (not os.path.exists(filename)) or (os.path.getsize(filename) == 0):
         with open(filepath, 'w') as f:
             pass
         logging.info(f'>>>>> Creating empty: {filepath} <<<<<')
